@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .register{
+    /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+    margin-top: 7%;  
+    padding: 3%;
+    margin-bottom:2%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}
+#myVideo {
+  position: absolute;;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 110%;
+}
+</style>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="backv.mp4" type="video/mp4">
+      </video>
+    <section class="navigation">
+        <div class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:black;">
+          <span class="navbar-brand mb-0 "> <img src="front.png" style="width:50px"></span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#UI-top" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="UI-top">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Report Crime
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/manualReport">Manual Report</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/Realtimereport">Real Time Report</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/suspect">Report Suspect</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="front.png" alt=""/ style="width:80px;">
+                <h3>Welcome</h3>
+                <p>If you want to fly like an eagle, then stop swimming with ducks</p>
+                <input type="submit" name="" value="Login"/><br/>
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">MEMBER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Project</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Join Our Team</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Describe Yourself" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="College/University" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <div class="maxl">
+                                        <label class="radio inline"> 
+                                            <input type="radio" name="gender" value="male" checked>
+                                            <span> Male </span> 
+                                        </label>
+                                        <label class="radio inline"> 
+                                            <input type="radio" name="gender" value="female">
+                                            <span>Female </span> 
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option class="hidden"  selected disabled>Please select your preference</option>
+                                        <option>Technical Member</option>
+                                        <option>Event Manager</option>
+                                        <option>Graphic Designer</option>
+                                        <option>Photographer</option>
+                                        <option>Marketting Member</option>
+                                        <option>Sponser</option>
+                                        <option>Other</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Stream" value="" />
+                                </div>
+                                <input type="submit" class="btnRegister"  value="Register"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3  class="register-heading">Project Details</h3>
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="First Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" maxlength="10" minlength="10" class="form-control" placeholder="Phone *" value="" />
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Project Name" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Describe Your" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option class="hidden"  selected disabled>Please select your Sequrity Question</option>
+                                        <option>What is your Birthdate?</option>
+                                        <option>What is Your old Phone Number</option>
+                                        <option>What is your Pet Name?</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="`Answer *" value="" />
+                                </div>
+                                <input type="submit" class="btnRegister"  value="Submit"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="page-footer font-small unique-color-dark" style="background-color: black;">
+
+        <div style="background-color: #6351ce;">
+          <div class="container">
+            <div class="row py-4 d-flex align-items-center">
+              <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                <h6 class="mb-0" style="color:white">Get connected with us on social networks!</h6>
+              </div>
+              <div class="col-md-6 col-lg-7 text-center text-md-right">
+      
+                <!-- Facebook -->
+                <a class="fb-ic" style="color:white">
+                  <i class="fa fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" style="color:white">
+                  <i class="fa fa-twitter white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic" style="color:white">
+                  <i class="fa fa-instagram white-text"> </i>
+                </a>
+      
+              </div>
+              <!-- Grid column -->
+      
+            </div>
+            <!-- Grid row-->
+      
+          </div>
+        </div>
+      
+        <div class="container text-center text-md-left mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold" style="color:white">Online Crime Report</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p style="color:white">Here you can report for any crime related issue, so that proper actons could be taken against it</p>
+      
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold" style="color:white">Features</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a href="#!">Security</a>
+              </p>
+              <p>
+                <a href="#!">Privacy</a>
+              </p>
+              <p>
+                <a href="#!">Safe Data Handling</a>
+              </p>
+              <p>
+                <a href="#!">User Friendly</a>
+              </p>
+      
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase font-weight-bold" style="color:white">Useful links</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p>
+                <a href="police.gov.in">DevOfTeh</a>
+              </p>
+              <p>
+                <a href="#!">Indian Government</a>
+              </p>
+              <p>
+                <a href="#!">Crime Reporting</a>
+              </p>
+              <p>
+                <a href="#!">About Us</a>
+              </p>
+      
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase font-weight-bold" style="color:white">Contact</h6>
+              <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+              <p class="text" style="color:white">
+                <i class="fa fa-home mr-3"></i> Lovely Professional University, Jalandhar, Punjab</p>
+              <p class="text" style="color:white">
+                <i class="fa fa-envelope mr-3"></i>DevOfTech.lpu.in@gmail.com</p>
+              <p class="text" style="color:white">
+                <i class="fa fa-phone mr-3"></i>6388406765</p>
+              <p class="text" style="color:white">
+                <i class="fa fa-print mr-3"></i>9984939053</p>
+      
+            </div>
+      
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
